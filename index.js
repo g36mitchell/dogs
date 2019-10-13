@@ -48,20 +48,25 @@ function flatten(obj, list) {
 }
 
 function formatListOfBreeds() {
-  
+
   fetch("https://dog.ceo/api/breeds/list/all")
   .then(response => response.json())
   .then(responseJson => {
             let flattenedList = [];
+//            let flattenedBreed = "";
             let obj = responseJson.message;  /* interested only in the list of breeds */
-            for (key in obj) {
-                console.log(`${key}`);
-                if (obj[key].length == 0) {
-                    flattenedList.push(key);
+            let listOfKeys = Object.keys(obj);
+            console.log(`${Object.keys(obj)}`);
+            for (let j = 0; j < listOfKeys.length; j++) {
+                console.log(`${listOfKeys[j]}`);
+                if (obj[listOfKeys[j]].length == 0) {
+                    flattenedList.push(listOfKeys[j]);
                 }
                 else {
-                    for (i = 0; i < obj[key].length; i++) {
-                          flattenendList.push(`${obj[key][i]} ${key}`);
+                    for (let i = 0; i < obj[listOfKeys[j]].length; i++) {
+                          console.log(`${obj[listOfKeys[j]][i]} ${listOfKeys[j]}`);
+                          // looks perfect in the console log but fails to push
+                          flattenendList.push((obj[listOfKeys[j]][i] + " " + listOfKeys[j]));
                     }
                 }
             }
