@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(images/968525_dalmatian-backgrounds-wallpapers-cave_1600x1066_h.jpg);
+    color: goldenrod;
+    font-size: 16px;
+  }
+  
+  h1, h2 {
+      font-variant: small-caps;
+      padding: 10px 5px 10px 5px;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    min-height: 400px;
+    padding: 10px 0px 10px 0px;
+  }
+
+  .pickOptions {
+      margin: 10px 0px 30px 0px;
+  }
+
+  .anyBreed {
+      margin-top: 20px;
+  }
+
+  input {
+      text-align: center;
+  }
+
+  label {
+      font-weight: bold;
+  }
+  
+
+
+.hidden {display: none;}
+
+.show {display: block;}
+
+  input[type = number] {
+       height: 35px;
+  }
+
+  input[type = submit] {
+    height: 35px;
+    width: 150px;
+}
+
+
+/*  div #slider, ul slides, variable number of li have images slide */
+#slider {
+    background-color: #3D3027;
+    margin: 0px;
+    padding: 0px;
+}
+
+#slider .slides {
+    padding: 0px;
+}
+
+#slider .slide {
+    list-style-type: none;
+    text-align: center; 
+    padding: 10px 10px 10px 10px;
+}
+
+#slider img {
+    max-width: 100%;
+    height: auto;
+}
+/*
+.dropdown-button {
+    background-color: goldenrod;
+    color: whitesmoke;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+.dropdown-button:hover, .dropdown-button:focus {
+  background-color: #42352C;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown li:hover {background-color: #ddd;}
+
+*/
+ 

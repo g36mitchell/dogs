@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!--   <meta http-equiv="X-UA-Compatible" content="ie=edge">  -->
+    <title>Dog API Example</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dog API</h1>
+        <hr />    
+        <form class="js-pick-options pickOptions">
+            <h2>Love dogs?   See some pictures!</h2>
+            <p>Pick an option:</p>
+            <input  id="option1" type="radio" name="options"  value="anyBreed">
+            <label for="option1">I want to see lots of dogs.</label><br />
+            <input  id="option2" type="radio" name="options"  value="specificBreed">
+            <label for="option2">I want to see a picture of a specific breed.</label>
+        </form>
+        <hr />
+        <div class="js-any-breed hidden">
+            <form class="js-form-any-breed">
+                <label for="numberOfDogs">How many doggy pictures do you want to see? (up to 50):
+                    <input type="number" id="numberOfDogs" name="numberOfDogs" class="js-number-of-dogs" min="1" max="50" value="3">
+                </label>
+                <input type="submit" value="Get your pictures!">
+            </form>
+            <div id="slider" class="js-display-dog-pictures hidden">
+                    <ul class="slides js-slides">
+    <!--                 put the image(s) here       -->
+                    </ul>
+            </div>
+        </div>
+        <div class="js-specific-breed hidden">
+            <div class="show-breeds js-show-breeds">
+                <ul id="js-breed-list" class="breed-list">
+<!--                  Load breed types here    -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
