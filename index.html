@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Dog API</h1>
         <hr />    
-        <form class="js-pick-options pickOptions">
+        <form id="js-pick-options" class="pickOptions">
             <h2>Love dogs?   See some pictures!</h2>
             <p>Pick an option:</p>
             <input  id="option1" type="radio" name="options"  value="anyBreed">
@@ -20,23 +20,29 @@
             <label for="option2">I want to see a picture of a specific breed.</label>
         </form>
         <hr />
-        <div class="js-any-breed hidden">
-            <form class="js-form-any-breed">
+        <div id="js-any-breed" class="anybreed hidden">
+            <form id="js-form-any-breed">
                 <label for="numberOfDogs">How many doggy pictures do you want to see? (up to 50):
                     <input type="number" id="numberOfDogs" name="numberOfDogs" class="js-number-of-dogs" min="1" max="50" value="3">
                 </label>
                 <input type="submit" value="Get your pictures!">
             </form>
-            <div id="slider" class="js-display-dog-pictures hidden">
-                    <ul class="slides js-slides">
+            <div id="js-slider-any-breed" class="slider hidden">
+                    <ul id="js-slides-any-breed" class="slides">
     <!--                 put the image(s) here       -->
                     </ul>
             </div>
         </div>
-        <div class="js-specific-breed hidden">
-            <div class="show-breeds js-show-breeds">
-                <ul id="js-breed-list" class="breed-list">
-<!--                  Load breed types here    -->
+        <div id="js-specific-breed" class="hidden">
+            <form id="js-form-specific-breed">
+                <select id="js-breed-list" class="breed-list">
+ <!--                  Load breed types here    -->
+                </select>
+                <input type="submit" value="Get your picture!">
+            </form>
+            <div id="js-slider-specific-breed" class="slider hidden">
+                <ul id="js-slides-specific-breed" class="slides">
+<!--                 put the image here       -->
                 </ul>
             </div>
         </div>
