@@ -57,17 +57,12 @@ function getDogImage(breed) {
     .then(response => response.json())
     .then(responseJson => {
 
-      if ( responseJson.success == "true" ) {
-           let dogSliderItems = 
-             `<li class="slides"><img src="${responseJson.message}" /></li>`;
+      if ( responseJson.status == "success" ) {
+          displayDogImage(`<li class="slides"><img src="${responseJson.message}" /></li>`);
       }
       else {
-        let dogSliderItems = 
-        `<li class="slides"><img src="images/sadPanda.png" /></li>`;
+          displayDogImage(`<li class="slides"><img src="images/sadpanda.png" /></li>`);
       }
-
-      displayDogImage(dogSliderItems);
-
     })
     .catch(error => alert('Oops! Something went wrong. Try again later.'));
 }
@@ -84,13 +79,13 @@ function formatListOfBreeds() {
       for (let j = 0; j < listOfKeys.length; j++) {
 
         if (j == 3) {
-          flattenendList.push({"display": "Monkey",
-                               "api": "monkey"})
+          flattenedList.push({"display": "Monkey",
+                               "api": "monkey"});
         }
 
         if (j == 7) {
-          flattenendList.push({"display": "Cat",
-                               "api": "cat"})
+          flattenedList.push({"display": "Cat",
+                               "api": "cat"});
         }
 
         if (obj[listOfKeys[j]].length == 0) {
