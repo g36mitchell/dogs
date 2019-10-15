@@ -44,8 +44,13 @@
 
 .show {display: block;}
 
-  input[type = number] {
-    height: 35px;
+input[type = number] {
+    background-color: goldenrod;
+    color: whitesmoke;
+    padding: 16px;
+    font-size: 16px;
+    border: solid;
+    cursor: pointer;
   }
 
 input[type = submit] {

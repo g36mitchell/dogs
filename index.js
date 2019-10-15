@@ -56,9 +56,18 @@ function getDogImage(breed) {
   fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
     .then(response => response.json())
     .then(responseJson => {
-      let dogSliderItems = 
-       `<li class="slides"><img src="${responseJson.message}" /></li>`;
+
+      if ( responseJson.success == "true" ) {
+           let dogSliderItems = 
+             `<li class="slides"><img src="${responseJson.message}" /></li>`;
+      }
+      else {
+        let dogSliderItems = 
+        `<li class="slides"><img src="images/sadPanda.png" /></li>`;
+      }
+
       displayDogImage(dogSliderItems);
+
     })
     .catch(error => alert('Oops! Something went wrong. Try again later.'));
 }
@@ -73,6 +82,17 @@ function formatListOfBreeds() {
       let obj = responseJson.message;  /* interested only in the list of breeds */
       let listOfKeys = Object.keys(obj);
       for (let j = 0; j < listOfKeys.length; j++) {
+
+        if (j == 3) {
+          flattenendList.push({"display": "Monkey",
+                               "api": "monkey"})
+        }
+
+        if (j == 7) {
+          flattenendList.push({"display": "Cat",
+                               "api": "cat"})
+        }
+
         if (obj[listOfKeys[j]].length == 0) {
           flattenedList.push({"display": listOfKeys[j], 
                               "api": listOfKeys[j]
